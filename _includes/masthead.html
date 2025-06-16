@@ -16,7 +16,7 @@
   {%- for link in site.data.navigation.main -%}
     <li class="masthead__menu-item">
       <a href="{{ link.url | relative_url }}?lang={{ current_lang }}"{% if link.description %} title="{{ link.description }}"{% endif %}>
-        {{ link.title }}
+       {{ link.title[current_lang] }}
       </a>
     </li>
   {%- endfor -%}
