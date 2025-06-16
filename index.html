@@ -1,17 +1,19 @@
 ---
 layout: home
 author_profile: true
+lang: fr
 ---
 
-{% assign lang = page.lang | default: site.lang | default: 'fr' %}
-{% assign t = site.data.lang[lang] %}
+{% assign current_lang = page.lang | default: site.lang | default: 'fr' %}
+{% assign t = site.data.lang[current_lang] %}
 
-<h2>{{ t.title }}</h2>
+{{ t.title }}
+
 {{ t.paragraph1 }}
+
 {{ t.paragraph2 }}
 
 <p>
   <a href="/?lang=fr">🇫🇷 Français</a> |
   <a href="/?lang=en">🇬🇧 English</a>
 </p>
-
