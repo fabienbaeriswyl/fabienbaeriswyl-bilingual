@@ -134,3 +134,22 @@ $(function() {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("lang-toggle");
+  if (!toggle) return;
+
+  toggle.addEventListener("click", function () {
+    const fr = document.getElementById("lang-fr");
+    const en = document.getElementById("lang-en");
+
+    if (fr.style.display === "none") {
+      fr.style.display = "";
+      en.style.display = "none";
+    } else {
+      fr.style.display = "none";
+      en.style.display = "";
+    }
+  });
+});
+
