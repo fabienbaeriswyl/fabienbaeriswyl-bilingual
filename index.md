@@ -9,6 +9,9 @@ lang: fr
 
 {{ t.title }}
 
+<p>Lang is: {{ lang }}</p>
+
+
 {{ t.paragraph1 }}
 
 {{ t.paragraph2 }}
