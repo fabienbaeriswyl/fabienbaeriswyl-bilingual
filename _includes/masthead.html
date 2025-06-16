@@ -18,6 +18,12 @@
             </li>
           {%- endfor -%}
         </ul>
+
+        <!-- 🌐 Language Toggle Button -->
+        <button id="lang-toggle" style="margin-left: 1rem; padding: 0.3rem 0.5rem; font-size: 1rem;">
+          🇫🇷 / 🇬🇧
+        </button>
+        
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
