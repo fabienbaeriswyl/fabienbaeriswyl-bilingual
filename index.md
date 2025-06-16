@@ -1,16 +1,15 @@
 ---
 layout: home
 author_profile: true
-lang: fr
 ---
 
-{% assign current_lang = page.lang | default: site.lang | default: 'fr' %}
-{% assign t = site.data.lang[current_lang] %}
+{% assign lang_param = 'fr' %}
+{% if page.url contains 'lang=en' %}
+  {% assign lang_param = 'en' %}
+{% endif %}
+{% assign t = site.data.lang[lang_param] %}
 
 {{ t.title }}
-
-<p>Lang is: {{ lang }}</p>
-
 
 {{ t.paragraph1 }}
 
